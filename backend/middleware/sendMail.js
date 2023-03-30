@@ -3,7 +3,6 @@ import 'dotenv/config';
 
 import {get} from '../config/config'
 var email = get('staging').EMAIL;
-console.log(email,"email")
 const path = require('path');
 
 export const SendEmail = (from, to, subject, text) => {
