@@ -4,7 +4,8 @@ var config = require('./config/config');
 
 var configdata = config.get(process.env.Node_env).db;
 import 'dotenv/config'
-var mongoUrl = `mongodb://siddhantsingh:siddhantsingh87@${configdata.host}:${configdata.port}/${configdata.databaseName}`;
+var port = process.env.PORT || configdata.port
+var mongoUrl = `mongodb://siddhantsingh:siddhantsingh87@${configdata.host}:${port}/${configdata.databaseName}`;
 
 
 var options= {
